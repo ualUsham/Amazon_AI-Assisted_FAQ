@@ -1,6 +1,13 @@
+#load google api key
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv("API_KEY")
+
 # Call LLM model
 from langchain_google_genai import ChatGoogleGenerativeAI
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",api_key="AIzaSyCxpS4DpYHn8vmDVk04uYDeyIODFpz07hU")
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",api_key=api_key)
 #from langchain_ollama import OllamaLLM
 #llm=OllamaLLM(model="llama3")
 
