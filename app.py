@@ -1,10 +1,11 @@
 import ctypes
 import os
 
-# Dynamically load sqlite3.dll
+# Ensure the correct shared library file is used on Linux
 current_dir = os.path.dirname(__file__)  # Get the directory where this script is located
-dll_path = os.path.join(current_dir, "sqlite3.dll")
-ctypes.CDLL(dll_path)  # Load the SQLite DLL
+dll_path = os.path.join(current_dir, "sqlite3.so")  # Ensure the correct file extension
+ctypes.CDLL(dll_path)  # Load the SQLite library
+
 
 import streamlit as st
 from PIL import Image
