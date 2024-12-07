@@ -3,7 +3,7 @@ langchain-google-genai
 langchain-huggingface
 langchain-chroma
 langchain-community
-dotenv
+python-dotenv
 chromadb
 sentence-transformers
 streamlit
