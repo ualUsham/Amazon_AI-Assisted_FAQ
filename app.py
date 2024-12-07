@@ -1,3 +1,6 @@
+import ctypes
+ctypes.CDLL("sqlite3.dll")
+
 import streamlit as st
 from PIL import Image
 from core import get_answer
