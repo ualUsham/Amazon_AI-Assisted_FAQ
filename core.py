@@ -17,7 +17,7 @@ embed = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v
 
 
 # Create vector database
-from langchain_chroma import Chroma
+from langchain_chroma.vectorstores import Chroma
 from langchain_community.document_loaders import CSVLoader
 
 def chunk_data(data, chunk_size=30):
